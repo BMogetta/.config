@@ -1,0 +1,1 @@
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/BMogetta/.dotfiles/master/bash.sh)"`
