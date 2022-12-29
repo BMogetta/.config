@@ -20,20 +20,24 @@ sudo apt install npm #revisar esto
 npm install --global yarn pnpm
 
 # Rust
-curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh #pide un default, revisar
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 
 # Python
-sudo apt install software-properties-common -y
+sudo apt install software-properties-common -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tgz
+sudo tar -xf Python-3.10.5.tgz
+sudo ./Python-3.10.5/configure --enable-optimizations
+sudo make altinstall
 
 # AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
-sudo ./aws/install #no se ejectura elcomando probar agregar \
+sudo ./aws/install
 
 # Terraform
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update && sudo apt install terraform #no se ejectura elcomando probar agregar \
+sudo apt update && sudo apt install terraform
 
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -52,7 +56,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-
+# SNAP installs
 sudo snap install discord slack brave dbeaver-ce k9s
 sudo snap install kubectl --classic
 sudo snap install go --classic
