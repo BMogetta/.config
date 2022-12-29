@@ -9,11 +9,6 @@ sudo apt-get install unzip -y
 #stow
 sudo apt-get install stow
 
-# zsh & oh-my-zsh
-sudo apt-get install zsh -y
-chsh -s /usr/bin/zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Deno
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
@@ -33,12 +28,12 @@ sudo apt install software-properties-common -y
 # AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
-sudo ./aws/install
+sudo ./aws/install #no se ejectura elcomando probar agregar \
 
 # Terraform
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update && sudo apt install terraform
+sudo apt update && sudo apt install terraform #no se ejectura elcomando probar agregar \
 
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -63,3 +58,8 @@ sudo snap install kubectl --classic
 sudo snap install go --classic
 sudo snap install code --classic
 sudo snap install jenkins --classic
+
+# zsh & oh-my-zsh
+sudo apt-get install zsh -y
+chsh -s /usr/bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
