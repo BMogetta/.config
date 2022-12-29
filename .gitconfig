@@ -1,3 +1,8 @@
+[user]
+	email = brunomogetta@gmail.com
+	name = bmogetta
+	signingkey = storesomewheresecure
+
 [init]
 
 	defaultBranch = main
