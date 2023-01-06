@@ -10,7 +10,7 @@ sudo apt-get install unzip -y
 sudo apt-get install stow
 
 # Deno
-curl -fsSL https://deno.land/x/install/install.sh | sh
+curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh
 
 # Node & packages managers
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
