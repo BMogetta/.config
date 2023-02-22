@@ -84,7 +84,7 @@ plugins=(git web-search copyfile jsontools zsh-autosuggestions zsh-syntax-highli
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -111,3 +111,6 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source ~/.aliases
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
