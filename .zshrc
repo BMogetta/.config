@@ -84,7 +84,7 @@ plugins=(git web-search copyfile jsontools zsh-autosuggestions zsh-syntax-highli
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
